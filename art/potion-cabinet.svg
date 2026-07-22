@@ -247,15 +247,26 @@
       <stop offset="1" stop-color="#5e3e0d"/>
     </linearGradient>
 
-    <!-- repeating scroll ornament for the frame bands -->
+    <!-- repeating acanthus scroll for the frame bands: shadow, body, highlight relief -->
     <g id="ornTile">
-      <path d="M8,44 C6,20 34,10 48,22 C60,32 54,48 42,48 C33,48 29,41 34,35" fill="none" stroke="#463108" stroke-width="7" stroke-linecap="round" transform="translate(2.2,2.4)"/>
-      <path d="M118,44 C120,20 92,10 78,22 C66,32 72,48 84,48 C93,48 97,41 92,35" fill="none" stroke="#463108" stroke-width="7" stroke-linecap="round" transform="translate(2.2,2.4)"/>
-      <path d="M8,44 C6,20 34,10 48,22 C60,32 54,48 42,48 C33,48 29,41 34,35" fill="none" stroke="#f4e096" stroke-width="5" stroke-linecap="round"/>
-      <path d="M118,44 C120,20 92,10 78,22 C66,32 72,48 84,48 C93,48 97,41 92,35" fill="none" stroke="#f4e096" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="63" cy="30" r="7.5" fill="#3f2c07"/>
-      <circle cx="61.6" cy="28.6" r="6" fill="#f7e7a8"/>
-      <path d="M56,50 Q63,42 70,50" fill="none" stroke="#f4e096" stroke-width="4" stroke-linecap="round"/>
+      <g fill="none" stroke="#3a2806" stroke-width="7" stroke-linecap="round" transform="translate(2.5,3)">
+        <path d="M6,48 C4,22 26,10 46,16 C60,20 64,34 56,42 C50,48 40,46 40,38 C40,32 46,30 49,34"/>
+        <path d="M120,48 C122,22 100,10 80,16 C66,20 62,34 70,42 C76,48 86,46 86,38 C86,32 80,30 77,34"/>
+      </g>
+      <g fill="none" stroke="#c9a23c" stroke-width="6.5" stroke-linecap="round">
+        <path d="M6,48 C4,22 26,10 46,16 C60,20 64,34 56,42 C50,48 40,46 40,38 C40,32 46,30 49,34"/>
+        <path d="M120,48 C122,22 100,10 80,16 C66,20 62,34 70,42 C76,48 86,46 86,38 C86,32 80,30 77,34"/>
+      </g>
+      <g fill="none" stroke="#f9ecb0" stroke-width="2.5" stroke-linecap="round">
+        <path d="M7,46 C6,24 27,12 45,18 C58,22 61,34 54,41"/>
+        <path d="M119,46 C120,24 99,12 81,18 C68,22 65,34 72,41"/>
+      </g>
+      <path d="M50,55 C55,45 71,45 76,55 C69,52 57,52 50,55 Z" fill="#a8842e" stroke="#3a2806" stroke-width="1.5"/>
+      <path d="M58,12 Q63,3 68,12 Q63,17 58,12 Z" fill="#d9b054" stroke="#3a2806" stroke-width="1.5"/>
+      <circle cx="63" cy="30" r="8.5" fill="#3f2c07"/>
+      <circle cx="63" cy="30" r="7" fill="#c9a23c"/>
+      <circle cx="61.2" cy="28.2" r="3.2" fill="#f9ecb0"/>
+      <path d="M57,52 l6,-4 6,4 -6,4 z" fill="#4d0d12" stroke="#2c0608" stroke-width="1"/>
     </g>
     <pattern id="ornH" width="126" height="62" patternUnits="userSpaceOnUse" x="12" y="14">
       <use href="#ornTile"/>
@@ -270,6 +281,18 @@
       <circle cx="6" cy="8" r="4.5" fill="#d9b054"/>
       <circle cx="4.8" cy="6.8" r="2" fill="#f7e7a8"/>
     </pattern>
+    <pattern id="eggH" width="26" height="13" patternUnits="userSpaceOnUse" x="16" y="2">
+      <path d="M0,1 L4,6.5 L0,12 Z" fill="#8a651c"/>
+      <ellipse cx="15" cy="6.5" rx="8" ry="5.2" fill="#4a350c"/>
+      <ellipse cx="14.2" cy="5.8" rx="6.5" ry="4.2" fill="#d9b054"/>
+      <ellipse cx="12.8" cy="4.6" rx="3" ry="2" fill="#f7e7a8"/>
+    </pattern>
+    <pattern id="eggV" width="13" height="26" patternUnits="userSpaceOnUse" x="2" y="16">
+      <path d="M1,0 L6.5,4 L12,0 Z" fill="#8a651c"/>
+      <ellipse cx="6.5" cy="15" rx="5.2" ry="8" fill="#4a350c"/>
+      <ellipse cx="5.8" cy="14.2" rx="4.2" ry="6.5" fill="#d9b054"/>
+      <ellipse cx="4.6" cy="12.8" rx="2" ry="3" fill="#f7e7a8"/>
+    </pattern>
 
     <!-- corner flourish (drawn for top-left, mirrored elsewhere) -->
     <linearGradient id="cornerGold" x1="0" y1="0" x2="1" y2="1">
@@ -283,30 +306,70 @@
       <stop offset="1" stop-color="#3a0710"/>
     </radialGradient>
     <g id="cornerOrn">
-      <path d="M16,16 C86,4 148,8 206,26 C164,32 134,42 114,60 C98,44 60,28 16,16 Z" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5" stroke-linejoin="round"/>
-      <path d="M16,16 C4,86 8,148 26,206 C32,164 42,134 60,114 C44,98 28,60 16,16 Z" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5" stroke-linejoin="round"/>
-      <path d="M22,20 C82,10 138,12 190,26" fill="none" stroke="#f7e7a8" stroke-width="4" stroke-linecap="round"/>
-      <path d="M20,22 C10,82 12,138 26,190" fill="none" stroke="#f7e7a8" stroke-width="4" stroke-linecap="round"/>
-      <path d="M64,64 C104,74 126,96 134,134 C96,126 74,104 64,64 Z" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
-      <path d="M70,70 C102,80 118,96 126,124" fill="none" stroke="#f7e7a8" stroke-width="3.5" stroke-linecap="round"/>
-      <circle cx="52" cy="52" r="20" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="2"/>
-      <path d="M52,38 C60,38 66,44 66,52 C66,58 61,63 55,63 C50,63 46,59 46,54 C46,50 49,47 53,47" fill="none" stroke="#f7e7a8" stroke-width="3.5" stroke-linecap="round"/>
-      <path d="M118,126 l16,-9 16,9 -16,9 z" fill="url(#gemRed)" stroke="#8a651c" stroke-width="2.5"/>
-      <circle cx="130" cy="122" r="2.2" fill="#e8b0b8" opacity=".9"/>
-      <circle cx="96" cy="30" r="8" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
-      <circle cx="30" cy="96" r="8" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
-      <path d="M96,30 C104,34 106,42 100,48" fill="none" stroke="#f7e7a8" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M30,96 C34,104 42,106 48,100" fill="none" stroke="#f7e7a8" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- relief shadow -->
+      <g transform="translate(3,3)" fill="#402c08" opacity=".85">
+        <path d="M18,18 C90,6 150,10 210,30 C168,36 140,48 122,66 C150,64 176,72 194,88 C160,90 136,100 122,116 C106,100 96,80 92,58 C74,72 48,80 18,80 C46,64 60,44 62,26 C48,22 32,20 18,18 Z"/>
+        <path d="M18,18 C6,90 10,150 30,210 C36,168 48,140 66,122 C64,150 72,176 88,194 C90,160 100,136 116,122 C100,106 80,96 58,92 C72,74 80,48 80,18 C64,46 44,60 26,62 C22,48 20,32 18,18 Z"/>
+      </g>
+      <!-- acanthus fans along both rails -->
+      <path d="M18,18 C90,6 150,10 210,30 C168,36 140,48 122,66 C150,64 176,72 194,88 C160,90 136,100 122,116 C106,100 96,80 92,58 C74,72 48,80 18,80 C46,64 60,44 62,26 C48,22 32,20 18,18 Z"
+            fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M18,18 C6,90 10,150 30,210 C36,168 48,140 66,122 C64,150 72,176 88,194 C90,160 100,136 116,122 C100,106 80,96 58,92 C72,74 80,48 80,18 C64,46 44,60 26,62 C22,48 20,32 18,18 Z"
+            fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- lobe spines -->
+      <g fill="none" stroke="#f9ecb0" stroke-width="3" stroke-linecap="round">
+        <path d="M24,22 C88,12 146,15 196,30"/>
+        <path d="M26,26 C66,42 96,44 118,62"/>
+        <path d="M22,24 C12,88 15,146 30,196"/>
+        <path d="M26,26 C42,66 44,96 62,118"/>
+      </g>
+      <g fill="none" stroke="#6e4f12" stroke-width="2" stroke-linecap="round" opacity=".8">
+        <path d="M60,30 C58,44 50,58 36,68"/>
+        <path d="M30,60 C44,58 58,50 68,36"/>
+        <path d="M126,60 C144,62 162,70 178,84"/>
+        <path d="M60,126 C62,144 70,162 84,178"/>
+      </g>
+      <!-- scallop shell on the diagonal -->
+      <g>
+        <path d="M100,100 C110,88 134,88 144,100 C150,110 146,126 122,132 C98,126 94,110 100,100 Z" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.8"/>
+        <g fill="none" stroke="#6e4f12" stroke-width="1.8">
+          <path d="M122,92 L122,130"/>
+          <path d="M108,96 L118,128"/>
+          <path d="M136,96 L126,128"/>
+        </g>
+        <path d="M104,100 C112,92 132,92 140,100" fill="none" stroke="#f9ecb0" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <!-- volutes -->
+      <circle cx="52" cy="52" r="21" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="2"/>
+      <path d="M52,37 C61,37 68,44 68,53 C68,60 62,66 55,66 C49,66 45,61 45,55 C45,50 49,47 53,48 C56,48.5 58,51 57,54" fill="none" stroke="#f9ecb0" stroke-width="3" stroke-linecap="round"/>
+      <path d="M52,37 C61,37 68,44 68,53" fill="none" stroke="#3a2806" stroke-width="1.5" stroke-linecap="round" transform="translate(1.5,1.5)"/>
+      <circle cx="102" cy="28" r="9" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
+      <path d="M102,22 C106,22 109,25 109,29 C109,32 106,34 104,33" fill="none" stroke="#f9ecb0" stroke-width="2"/>
+      <circle cx="28" cy="102" r="9" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
+      <path d="M22,102 C22,106 25,109 29,109 C32,109 34,106 33,104" fill="none" stroke="#f9ecb0" stroke-width="2"/>
+      <circle cx="160" cy="40" r="6.5" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.2"/>
+      <circle cx="40" cy="160" r="6.5" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.2"/>
+      <!-- seated gem with bezel -->
+      <path d="M136,146 l17,-10 17,10 -17,10 z" fill="none" stroke="#8a651c" stroke-width="5"/>
+      <path d="M136,146 l17,-10 17,10 -17,10 z" fill="url(#gemRed)" stroke="#2c0608" stroke-width="1.2"/>
+      <circle cx="149" cy="142" r="2.4" fill="#e8b0b8" opacity=".9"/>
     </g>
 
     <!-- mid-edge cartouche (horizontal) -->
     <g id="edgeOrnH">
       <path d="M-96,0 C-64,-22 -30,-26 0,-26 C30,-26 64,-22 96,0 C64,22 30,26 0,26 C-30,26 -64,22 -96,0 Z"
-            fill="#c79c3e" stroke="#4a350c" stroke-width="5"/>
-      <ellipse cx="0" cy="0" rx="34" ry="19" fill="#4d0d12" stroke="#2c0608" stroke-width="3"/>
-      <ellipse cx="-6" cy="-4" rx="13" ry="7" fill="#8c2a30" opacity=".85"/>
-      <path d="M-92,0 C-62,-17 -30,-21 0,-21 M92,0 C62,-17 30,-21 0,-21" fill="none" stroke="#f7e7a8" stroke-width="4.5" stroke-linecap="round"/>
-      <path d="M-52,10 Q-40,2 -30,12 M52,10 Q40,2 30,12" fill="none" stroke="#5c420e" stroke-width="4" stroke-linecap="round"/>
+            fill="#402c08" transform="translate(2.5,3)" opacity=".85"/>
+      <path d="M-96,0 C-64,-22 -30,-26 0,-26 C30,-26 64,-22 96,0 C64,22 30,26 0,26 C-30,26 -64,22 -96,0 Z"
+            fill="url(#cornerGold)" stroke="#5c4310" stroke-width="2"/>
+      <path d="M-92,0 C-62,-17 -30,-21 0,-21 M92,0 C62,-17 30,-21 0,-21" fill="none" stroke="#f9ecb0" stroke-width="4" stroke-linecap="round"/>
+      <path d="M-58,10 Q-46,2 -36,12 M58,10 Q46,2 36,12" fill="none" stroke="#6e4f12" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="-88" cy="2" r="7" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
+      <circle cx="88" cy="2" r="7" fill="url(#cornerGold)" stroke="#5c4310" stroke-width="1.5"/>
+      <path d="M-8,-24 Q0,-34 8,-24 Q0,-19 -8,-24 Z" fill="#d9b054" stroke="#5c4310" stroke-width="1.5"/>
+      <ellipse cx="0" cy="0" rx="36" ry="20" fill="none" stroke="#8a651c" stroke-width="6"/>
+      <ellipse cx="0" cy="0" rx="34" ry="19" fill="url(#gemRed)" stroke="#2c0608" stroke-width="1.5"/>
+      <ellipse cx="-8" cy="-6" rx="12" ry="6" fill="#c04a58" opacity=".75"/>
+      <circle cx="-14" cy="-9" r="2.5" fill="#f0c8ce" opacity=".95"/>
     </g>
 
     <clipPath id="scene"><rect x="92" y="92" width="1316" height="1816"/></clipPath>
@@ -344,6 +407,26 @@
       <line x1="576" y1="92" x2="576" y2="1908"/><line x1="754" y1="92" x2="754" y2="1908"/>
       <line x1="932" y1="92" x2="932" y2="1908"/><line x1="1092" y1="92" x2="1092" y2="1908"/>
       <line x1="1252" y1="92" x2="1252" y2="1908"/>
+    </g>
+    <!-- wood grain and knots -->
+    <g fill="none" stroke="#2e1409" stroke-width="1.5" opacity=".5">
+      <path d="M180,120 C176,400 184,800 178,1400"/>
+      <path d="M320,150 C324,500 316,900 322,1420"/>
+      <path d="M480,110 C476,420 484,900 478,1400"/>
+      <path d="M660,130 C664,500 656,950 662,1420"/>
+      <path d="M840,120 C836,480 844,900 838,1410"/>
+      <path d="M1010,140 C1014,520 1006,940 1012,1420"/>
+      <path d="M1180,120 C1176,430 1184,880 1178,1400"/>
+      <path d="M1330,150 C1334,520 1326,960 1332,1410"/>
+    </g>
+    <g fill="#1c0a05" opacity=".6">
+      <ellipse cx="330" cy="620" rx="9" ry="16"/>
+      <ellipse cx="1105" cy="760" rx="8" ry="14"/>
+      <ellipse cx="500" cy="1050" rx="7" ry="12"/>
+    </g>
+    <g fill="none" stroke="#120602" stroke-width="2" opacity=".7">
+      <ellipse cx="330" cy="620" rx="9" ry="16"/>
+      <ellipse cx="1105" cy="760" rx="8" ry="14"/>
     </g>
 
     <!-- red ambience on the back wall -->
@@ -437,7 +520,9 @@
       <g>
         <path d="M816,386 L816,224 Q816,204 832,198 L840,194 L840,168 L864,168 L864,194 L872,198 Q888,204 888,224 L888,386 Z" fill="url(#brownGlass)"/>
         <rect x="838" y="150" width="28" height="20" rx="6" fill="#d8d2c8"/>
+        <ellipse cx="852" cy="154" rx="9" ry="3.5" fill="#f2eee6" opacity=".8"/>
         <rect x="838" y="166" width="28" height="6" fill="#a8362a"/>
+        <path d="M836,172 C826,178 824,190 831,198 M868,172 C878,178 880,190 873,198" stroke="#9a948a" stroke-width="2.5" fill="none"/>
         <path d="M836,172 L830,196 M868,172 L874,196" stroke="#8a8478" stroke-width="3.5" fill="none"/>
         <rect x="817" y="230" width="4" height="130" rx="2" fill="#ff3524" opacity=".5" filter="url(#b2)"/>
         <rect x="822" y="228" width="5" height="140" rx="2.5" fill="#e8a060" opacity=".4" filter="url(#b2)"/>
@@ -447,6 +532,7 @@
       <g>
         <path d="M915,386 L915,232 Q915,204 930,192 L936,186 L936,140 L960,140 L960,186 L966,192 Q981,204 981,232 L981,386 Z" fill="url(#greenGlass)"/>
         <rect x="932" y="126" width="32" height="16" rx="4" fill="#1a2408"/>
+        <path d="M920,206 C918,186 928,172 936,164" fill="none" stroke="#b8d868" stroke-width="3" opacity=".35" filter="url(#b2)"/>
         <rect x="921" y="236" width="5" height="132" rx="2.5" fill="#a8c860" opacity=".35" filter="url(#b2)"/>
         <rect x="973" y="236" width="4" height="132" rx="2" fill="#5c7828" opacity=".3" filter="url(#b2)"/>
       </g>
@@ -454,7 +540,11 @@
       <g>
         <path d="M1010,386 L1010,258 Q1010,242 1022,236 L1028,232 L1028,212 L1048,212 L1048,232 L1054,236 Q1066,242 1066,258 L1066,386 Z" fill="url(#grayGlass)"/>
         <rect x="1026" y="192" width="24" height="18" rx="5" fill="#cfd2d6"/>
+        <ellipse cx="1038" cy="196" rx="8" ry="3" fill="#eceef2" opacity=".8"/>
+        <path d="M1024,214 C1016,220 1014,230 1020,236 M1052,214 C1060,220 1062,230 1056,236" stroke="#9aa0aa" stroke-width="2" fill="none"/>
         <path d="M1024,214 L1018,234 M1052,214 L1058,234" stroke="#8a8f98" stroke-width="3" fill="none"/>
+        <rect x="1014" y="300" width="48" height="80" fill="#2a2e38" opacity=".6"/>
+        <ellipse cx="1038" cy="300" rx="24" ry="5" fill="#4a505c" opacity=".7"/>
         <rect x="1015" y="260" width="4" height="110" rx="2" fill="#c8d4e0" opacity=".4" filter="url(#b2)"/>
       </g>
       <!-- 13: amber corked bottle -->
@@ -462,13 +552,17 @@
         <path d="M1090,386 L1090,262 Q1090,242 1104,236 L1110,232 L1110,204 L1134,204 L1134,232 L1140,236 Q1154,242 1154,262 L1154,386 Z" fill="url(#amberTopGlass)"/>
         <rect x="1107" y="182" width="30" height="24" rx="7" fill="url(#corkSmall)"/>
         <rect x="1096" y="266" width="5" height="106" rx="2.5" fill="#ffb060" opacity=".45" filter="url(#b2)"/>
+        <rect x="1094" y="300" width="56" height="80" fill="#6a2c08" opacity=".55"/>
+        <ellipse cx="1122" cy="300" rx="28" ry="5" fill="#a85a1c" opacity=".7"/>
         <ellipse cx="1122" cy="330" rx="16" ry="30" fill="#a85410" opacity=".5" filter="url(#b8)"/>
       </g>
       <!-- 14: tall brown swing-top -->
       <g>
         <path d="M1177,386 L1177,230 Q1177,210 1192,204 L1200,200 L1200,172 L1224,172 L1224,200 L1232,204 Q1247,210 1247,230 L1247,386 Z" fill="url(#brownGlass)"/>
         <rect x="1198" y="152" width="28" height="22" rx="6" fill="#d8d2c8"/>
+        <ellipse cx="1212" cy="157" rx="9" ry="3.5" fill="#f2eee6" opacity=".8"/>
         <rect x="1198" y="170" width="28" height="6" fill="#a8362a"/>
+        <path d="M1196,176 C1186,182 1184,194 1191,202 M1228,176 C1238,182 1240,194 1233,202" stroke="#9a948a" stroke-width="2.5" fill="none"/>
         <path d="M1196,176 L1190,200 M1228,176 L1234,200" stroke="#8a8478" stroke-width="3.5" fill="none"/>
         <rect x="1183" y="234" width="5" height="134" rx="2.5" fill="#e8a060" opacity=".38" filter="url(#b2)"/>
       </g>
@@ -493,6 +587,10 @@
       <rect x="92" y="384" width="1316" height="14" fill="url(#shelfBoardTop)"/>
       <rect x="92" y="384" width="1316" height="3" fill="#6b3a1e" opacity=".5"/>
       <rect x="92" y="396" width="1316" height="38" fill="url(#shelfFace)"/>
+      <g fill="none" stroke="#331708" stroke-width="2" opacity=".45" stroke-dasharray="70 46">
+        <path d="M92,406 H1408"/>
+        <path d="M112,420 H1408"/>
+      </g>
       <rect x="92" y="430" width="1316" height="36" fill="#000" opacity=".65" filter="url(#b8)"/>
     </g>
 
@@ -503,6 +601,12 @@
       <rect x="640" y="1448" width="220" height="66" fill="#ff7a9a" opacity=".28" filter="url(#b14)"/>
       <ellipse cx="330" cy="1470" rx="180" ry="30" fill="#7a1a10" opacity=".35" filter="url(#b8)"/>
       <ellipse cx="1190" cy="1470" rx="180" ry="30" fill="#7a1a10" opacity=".35" filter="url(#b8)"/>
+      <g fill="none" stroke="#4a1f10" stroke-width="2" opacity=".4" stroke-dasharray="90 55">
+        <path d="M92,1466 C500,1462 1000,1470 1408,1464"/>
+        <path d="M92,1490 C500,1494 1000,1486 1408,1492"/>
+        <path d="M112,1510 C500,1506 1000,1512 1408,1508"/>
+      </g>
+      <path d="M600,1521 H900" fill="none" stroke="#7a3a20" stroke-width="3" opacity=".5" filter="url(#b2)"/>
     </g>
 
     <!-- ============ LEFT BOTTLE GROUP ============ -->
@@ -526,6 +630,8 @@
         <rect x="246" y="1038" width="24" height="36" rx="8" fill="url(#corkSmall)"/>
         <rect x="279" y="1210" width="6" height="220" rx="3" fill="#ff9d86" opacity=".8" filter="url(#b2)"/>
         <rect x="232" y="1210" width="4" height="220" rx="2" fill="#c04a30" opacity=".5" filter="url(#b2)"/>
+        <rect x="263" y="1096" width="4" height="42" rx="2" fill="#ff9d86" opacity=".6" filter="url(#b2)"/>
+        <ellipse cx="258" cy="1330" rx="20" ry="95" fill="#2e0603" opacity=".45" filter="url(#b8)"/>
       </g>
 
       <!-- c: tall labeled bottle -->
@@ -534,15 +640,21 @@
         <rect x="328" y="1026" width="44" height="14" rx="5" fill="#4a100c"/>
         <rect x="334" y="994" width="32" height="36" rx="9" fill="url(#corkSmall)"/>
         <rect x="388" y="1180" width="6" height="250" rx="3" fill="#ff9d86" opacity=".8" filter="url(#b2)"/>
+        <rect x="360" y="1048" width="4" height="46" rx="2" fill="#ff9d86" opacity=".6" filter="url(#b2)"/>
+        <ellipse cx="350" cy="1390" rx="34" ry="48" fill="#2e0603" opacity=".45" filter="url(#b8)"/>
         <!-- label with portrait -->
         <g>
           <rect x="311" y="1192" width="78" height="152" rx="3" fill="#cdbda6"/>
           <rect x="311" y="1192" width="78" height="152" rx="3" fill="#7a2a14" opacity=".18"/>
+          <rect x="315" y="1196" width="70" height="144" fill="none" stroke="#8a7a64" stroke-width="1.5"/>
           <text x="350" y="1214" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="bold" fill="#31241a" text-anchor="middle">Jloxlolla</text>
           <rect x="322" y="1222" width="56" height="4" fill="#8a7a64"/>
           <rect x="330" y="1236" width="40" height="52" fill="#2a1c12"/>
+          <rect x="330" y="1236" width="40" height="52" fill="none" stroke="#9a8a70" stroke-width="1.5"/>
           <ellipse cx="350" cy="1256" rx="9" ry="11" fill="#8a7258"/>
+          <ellipse cx="347" cy="1252" rx="3" ry="4" fill="#a89078" opacity=".8"/>
           <path d="M341,1288 Q350,1272 359,1288 Z" fill="#665040"/>
+          <rect x="336" y="1291" width="28" height="3" fill="#8a7a64"/>
           <rect x="322" y="1298" width="56" height="3.5" fill="#7c6c58"/>
           <rect x="322" y="1308" width="56" height="3.5" fill="#7c6c58"/>
           <rect x="322" y="1318" width="44" height="3.5" fill="#7c6c58"/>
@@ -558,6 +670,7 @@
         <rect x="180" y="1302" width="40" height="12" rx="4" fill="#5c1410"/>
         <rect x="186" y="1276" width="28" height="30" rx="8" fill="url(#corkSmall)"/>
         <path d="M248,1374 A 58,46 0 0 1 250,1416" fill="none" stroke="#ff8a72" stroke-width="6" opacity=".85" filter="url(#b2)"/>
+        <path d="M148,1392 Q160,1354 198,1350" fill="none" stroke="#d86a50" stroke-width="3" opacity=".5" filter="url(#b2)"/>
         <path d="M148,1378 A 58,46 0 0 0 146,1414" fill="none" stroke="#a83820" stroke-width="4" opacity=".5" filter="url(#b2)"/>
         <ellipse cx="200" cy="1400" rx="34" ry="30" fill="#2e0603" opacity=".6" filter="url(#b8)"/>
         <ellipse cx="188" cy="1398" rx="56" ry="46" fill="#140303" opacity=".3" filter="url(#b4)"/>
@@ -568,6 +681,7 @@
       <g>
         <path d="M267,1447 L267,1348 Q267,1336 277,1332 L283,1329 L283,1312 L317,1312 L317,1329 L323,1332 Q333,1336 333,1348 L333,1447 Z" fill="url(#redGlassR)"/>
         <rect x="286" y="1292" width="28" height="24" rx="7" fill="url(#corkSmall)"/>
+        <rect x="284" y="1312" width="32" height="5" rx="2.5" fill="#7a1a10"/>
         <rect x="274" y="1356" width="52" height="66" rx="2" fill="#c4b49e"/>
         <rect x="274" y="1356" width="52" height="66" rx="2" fill="#7a2a14" opacity=".16"/>
         <rect x="280" y="1364" width="40" height="4" fill="#5c4c3a"/>
@@ -586,6 +700,8 @@
         <rect x="450" y="1044" width="36" height="42" rx="10" fill="#c8402a" opacity=".35"/>
         <rect x="512" y="1230" width="7" height="200" rx="3.5" fill="#ffb090" opacity=".85" filter="url(#b2)"/>
         <rect x="419" y="1230" width="5" height="200" rx="2.5" fill="#d86a40" opacity=".5" filter="url(#b2)"/>
+        <rect x="482" y="1096" width="5" height="52" rx="2.5" fill="#ffb090" opacity=".7" filter="url(#b2)"/>
+        <ellipse cx="468" cy="1332" rx="38" ry="88" fill="#3a0e04" opacity=".38" filter="url(#b8)"/>
         <!-- label -->
         <g>
           <rect x="421" y="1238" width="94" height="168" rx="3" fill="#e3d3ba"/>
@@ -601,6 +717,9 @@
           <rect x="434" y="1357" width="46" height="3" fill="#ab9b82"/>
           <rect x="434" y="1372" width="68" height="3" fill="#ab9b82"/>
           <rect x="434" y="1381" width="58" height="3" fill="#ab9b82"/>
+          <circle cx="497" cy="1386" r="11" fill="#8a1c10" stroke="#5c0e08" stroke-width="2"/>
+          <circle cx="497" cy="1386" r="6" fill="none" stroke="#b04a34" stroke-width="1.5" opacity=".8"/>
+          <circle cx="494" cy="1382" r="2" fill="#c86050" opacity=".9"/>
           <rect x="421" y="1238" width="94" height="168" rx="3" fill="url(#labelShade)"/>
         </g>
       </g>
@@ -629,7 +748,9 @@
         <path d="M1051,1124 A34,9 0 0 0 1113,1124" fill="none" stroke="#ffd0a8" opacity=".6" stroke-width="3" filter="url(#b2)"/>
         <rect x="1048" y="1130" width="6" height="300" rx="3" fill="#ffd8b8" opacity=".9" filter="url(#b2)"/>
         <rect x="1110" y="1130" width="5" height="300" rx="2.5" fill="#ffb890" opacity=".55" filter="url(#b2)"/>
+        <rect x="1060" y="1152" width="3" height="268" rx="1.5" fill="#ffe8d0" opacity=".45" filter="url(#b2)"/>
         <path d="M1068,1032 C1060,1048 1048,1072 1048,1110" fill="none" stroke="#ffd8b8" stroke-width="4" opacity=".7" filter="url(#b2)"/>
+        <ellipse cx="1082" cy="1440" rx="34" ry="7" fill="#e8a878" opacity=".5"/>
       </g>
 
       <!-- h: tallest corked bottle -->
@@ -646,6 +767,9 @@
         <path d="M1162,1162 A39,9 0 0 0 1234,1162" fill="none" stroke="#ff9d8a" stroke-width="3" opacity=".6" filter="url(#b2)"/>
         <rect x="1160" y="1070" width="7" height="360" rx="3.5" fill="#ff9d86" opacity=".85" filter="url(#b2)"/>
         <rect x="1233" y="1070" width="5" height="360" rx="2.5" fill="#b84a30" opacity=".45" filter="url(#b2)"/>
+        <rect x="1172" y="1182" width="3" height="238" rx="1.5" fill="#ff8a76" opacity=".4" filter="url(#b2)"/>
+        <ellipse cx="1198" cy="1440" rx="39" ry="7" fill="#7a2016" opacity=".6"/>
+        <path d="M1190,904 C1189,918 1191,932 1190,938 M1204,902 C1205,918 1203,930 1205,940" fill="none" stroke="#8a6a44" stroke-width="1.4" opacity=".6"/>
       </g>
 
       <!-- i: medium corked bottle -->
@@ -660,6 +784,9 @@
         <path d="M1265,1447 L1265,1134 Q1265,1104 1281,1090 Q1290,1082 1290,1068 L1290,1042 L1316,1042 L1316,1068 Q1316,1082 1325,1090 Q1341,1104 1341,1134 L1341,1447 Z" fill="#140303" opacity=".22"/>
         <rect x="1269" y="1140" width="6" height="300" rx="3" fill="#ffc8a0" opacity=".85" filter="url(#b2)"/>
         <rect x="1334" y="1140" width="4" height="300" rx="2" fill="#d87848" opacity=".5" filter="url(#b2)"/>
+        <rect x="1280" y="1202" width="3" height="220" rx="1.5" fill="#ffd0ac" opacity=".4" filter="url(#b2)"/>
+        <ellipse cx="1303" cy="1440" rx="34" ry="7" fill="#b05028" opacity=".5"/>
+        <path d="M1292,1010 C1291,1022 1293,1032 1292,1038 M1304,1008 C1305,1022 1303,1032 1305,1040" fill="none" stroke="#8a6a44" stroke-width="1.4" opacity=".6"/>
       </g>
     </g>
 
@@ -668,6 +795,16 @@
       <!-- big soft halo -->
       <ellipse cx="750" cy="1120" rx="300" ry="440" fill="#ff2136" opacity=".33" filter="url(#b70)"/>
       <ellipse cx="750" cy="1300" rx="220" ry="240" fill="#ff3b52" opacity=".38" filter="url(#b45)"/>
+
+      <!-- dust motes drifting in the glow -->
+      <g fill="#ff9db0" filter="url(#b2)">
+        <circle cx="660" cy="940" r="2" opacity=".5"/><circle cx="700" cy="702" r="1.5" opacity=".4"/>
+        <circle cx="820" cy="758" r="2.5" opacity=".45"/><circle cx="882" cy="980" r="1.5" opacity=".5"/>
+        <circle cx="638" cy="1082" r="2" opacity=".4"/><circle cx="912" cy="1122" r="2.5" opacity=".45"/>
+        <circle cx="702" cy="618" r="1.5" opacity=".35"/><circle cx="578" cy="862" r="2" opacity=".4"/>
+        <circle cx="942" cy="892" r="1.5" opacity=".45"/><circle cx="862" cy="648" r="2" opacity=".35"/>
+        <circle cx="598" cy="1002" r="1.5" opacity=".45"/><circle cx="922" cy="1252" r="2" opacity=".5"/>
+      </g>
 
       <!-- shadow/contact -->
       <ellipse cx="750" cy="1452" rx="160" ry="20" fill="#5c0010" opacity=".55" filter="url(#b8)"/>
@@ -681,11 +818,32 @@
 
         <!-- cork bottom dissolving through the neck glass -->
         <path d="M716,686 L784,686 L780,734 Q750,742 720,734 Z" fill="url(#corkTipFade)" filter="url(#b4)"/>
+        <!-- dropper rod and bulb hinted through the glass -->
+        <rect x="745" y="738" width="9" height="122" rx="4" fill="#7a5a3c" opacity=".35" filter="url(#b2)"/>
+        <ellipse cx="749" cy="874" rx="14" ry="19" fill="#8a3050" opacity=".3" filter="url(#b4)"/>
+        <!-- shoulder window catchlights -->
+        <ellipse cx="670" cy="762" rx="13" ry="40" fill="#ffffff" opacity=".38" filter="url(#b4)" transform="rotate(28 670 762)"/>
+        <ellipse cx="830" cy="762" rx="10" ry="34" fill="#ffe0ec" opacity=".28" filter="url(#b4)" transform="rotate(-28 830 762)"/>
+        <!-- diagonal sheen across the body -->
+        <polygon points="640,860 706,860 620,1400 560,1400" fill="#ffffff" opacity=".05" filter="url(#b8)"/>
 
         <!-- liquid -->
         <path d="M610,1212 C660,1196 840,1196 890,1212 L890,1420 A141,25 0 0 1 610,1420 Z" fill="url(#liquid)" opacity=".97"/>
         <ellipse cx="750" cy="1210" rx="140" ry="15" fill="#ff7086" opacity=".9"/>
         <ellipse cx="750" cy="1420" rx="130" ry="22" fill="#ff6a74" opacity=".85" filter="url(#b14)"/>
+        <!-- glass-bottom thickness and meniscus wall contacts -->
+        <ellipse cx="750" cy="1434" rx="120" ry="15" fill="#ff9aa8" opacity=".5" filter="url(#b4)"/>
+        <ellipse cx="616" cy="1212" rx="6" ry="3" fill="#ffb6c4" opacity=".9"/>
+        <ellipse cx="884" cy="1212" rx="6" ry="3" fill="#ffb6c4" opacity=".9"/>
+        <!-- rising bubbles -->
+        <g fill="#ff9fae">
+          <circle cx="668" cy="1352" r="3" opacity=".7"/>
+          <circle cx="688" cy="1396" r="2" opacity=".55"/>
+          <circle cx="830" cy="1302" r="2.5" opacity=".6" filter="url(#b2)"/>
+          <circle cx="812" cy="1386" r="3.5" opacity=".7"/>
+          <circle cx="760" cy="1360" r="2" opacity=".5"/>
+          <circle cx="843" cy="1352" r="2" opacity=".55"/>
+        </g>
 
         <!-- inner pink glow behind label -->
         <ellipse cx="750" cy="1300" rx="110" ry="170" fill="#ff6e8e" opacity=".45" filter="url(#b25)"/>
@@ -696,6 +854,12 @@
                  fill="#ff8fd0" opacity=".9" filter="url(#b14)"/>
         <polygon points="644,1106 660,1102 675,1104 691,1095 706,1097 722,1092 737,1086 753,1088 769,1081 784,1082 800,1075 815,1072 831,1073 846,1074 858,1068 860,1088 864,1109 867,1129 864,1149 863,1170 869,1190 860,1210 868,1231 863,1251 862,1271 862,1292 866,1310 851,1316 835,1309 820,1315 804,1316 789,1313 773,1316 758,1311 743,1311 727,1314 712,1320 696,1317 681,1317 665,1320 650,1320 647,1302 652,1285 650,1267 645,1249 648,1232 647,1214 650,1196 648,1179 643,1161 650,1143 641,1126"
                  fill="url(#labelGrad)"/>
+        <!-- faint paper wrinkles and edge shading -->
+        <g fill="none" stroke="#e88ab8" stroke-width="1.5" opacity=".1" filter="url(#b2)">
+          <path d="M660,1160 C700,1155 800,1165 854,1152"/>
+          <path d="M658,1296 C700,1290 800,1300 856,1290"/>
+        </g>
+        <path d="M652,1314 C700,1322 800,1310 862,1310" fill="none" stroke="#d878aa" stroke-width="4" opacity=".18" filter="url(#b4)"/>
 
         <!-- specular streaks -->
         <rect x="620" y="850" width="20" height="556" rx="10" fill="url(#streakFade)" opacity=".55" filter="url(#b4)"/>
@@ -732,10 +896,21 @@
         <circle cx="775" cy="636" r="1.6"/><circle cx="758" cy="660" r="1.6"/>
       </g>
       <rect x="706" y="596" width="8" height="68" rx="4" fill="#f0dcb2" opacity=".6" filter="url(#b2)"/>
+      <!-- cork grain and chamfer -->
+      <g fill="none" stroke="#a5804f" stroke-width="1.6" opacity=".55">
+        <path d="M714,606 C716,628 712,650 716,668"/>
+        <path d="M730,600 C728,626 733,650 729,672"/>
+        <path d="M752,598 C755,624 750,652 754,676"/>
+        <path d="M772,600 C770,628 775,652 771,672"/>
+        <path d="M786,608 C788,630 784,652 787,668"/>
+      </g>
+      <rect x="708" y="602" width="84" height="6" rx="3" fill="#b08d5c" opacity=".4"/>
 
-      <!-- glow pooling at the base -->
+      <!-- glow pooling at the base with refraction caustics -->
       <ellipse cx="750" cy="1450" rx="230" ry="26" fill="#ff2038" opacity=".8" filter="url(#b14)"/>
       <ellipse cx="750" cy="1452" rx="120" ry="14" fill="#ff7a86" opacity=".75" filter="url(#b8)"/>
+      <path d="M556,1464 Q610,1482 662,1468" fill="none" stroke="#ff9daa" stroke-width="6" opacity=".5" filter="url(#b4)"/>
+      <path d="M838,1468 Q890,1482 944,1464" fill="none" stroke="#ff9daa" stroke-width="6" opacity=".5" filter="url(#b4)"/>
     </g>
 
     <!-- ============ PAPERS ON MAIN SHELF ============ -->
@@ -779,9 +954,13 @@
   <g id="frame">
     <!-- base ring -->
     <path d="M0,0 H1500 V2000 H0 Z M92,92 V1908 H1408 V92 Z" fill="url(#goldBase)" fill-rule="evenodd"/>
-    <!-- outer ridge -->
+    <!-- outer ridge with egg-and-dart molding -->
     <rect x="4" y="4" width="1492" height="1992" fill="none" stroke="#f0dc8e" stroke-width="4"/>
     <rect x="0.5" y="0.5" width="1499" height="1999" fill="none" stroke="#3a2a08" stroke-width="2"/>
+    <rect x="16" y="2" width="1468" height="13" fill="url(#eggH)"/>
+    <rect x="16" y="1985" width="1468" height="13" fill="url(#eggH)"/>
+    <rect x="2" y="16" width="13" height="1968" fill="url(#eggV)"/>
+    <rect x="1485" y="16" width="13" height="1968" fill="url(#eggV)"/>
     <!-- main bands -->
     <rect x="12" y="12" width="1476" height="66" fill="url(#goldBandH)"/>
     <rect x="12" y="1922" width="1476" height="66" fill="url(#goldBandH)"/>
